@@ -77,8 +77,8 @@ npm run pack
 问：无法抓包？
 
 答：这个问题主要是缓存的问题(会影响 javascript 脚本注入 polyfills.publishxxx.js)：
-windows下清除 C:\Users\<user>\AppData\Roaming\Tencent\WeChat\radium\web\profiles\*
-macOS 下清除 ~/Library/Containers/com.tencent.xinWeChat/Data/.wxapplet/web/profiles/multitab*
+* windows下清除 C:\Users\<user>\AppData\Roaming\Tencent\WeChat\radium\web\profiles\*
+* macOS 下清除 ~/Library/Containers/com.tencent.xinWeChat/Data/.wxapplet/web/profiles/multitab*
 ```
 rm -rf Library/Containers/com.tencent.xinWeChat/Data/.wxapplet/web/profiles/multitab*
 ```
