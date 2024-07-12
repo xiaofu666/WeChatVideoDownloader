@@ -52,7 +52,7 @@
 ![image](https://user-images.githubusercontent.com/11046969/169732943-4815fa79-dda4-4bfd-904c-70d8e625d8f6.png)
 
 ---
-#### 本地编译
+### 本地编译
 
 安装 node, yarn
 ```
@@ -66,13 +66,13 @@ yarn add concurrently --dev
 yarn start
 ```
 
-#### 打包应用
+### 打包应用
 ```
 npm run pack
 ```
 
 
-FAQ:
+### FAQ:
 
 问：无法抓包？
 
