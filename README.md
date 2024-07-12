@@ -52,23 +52,24 @@
 ![image](https://user-images.githubusercontent.com/11046969/169732943-4815fa79-dda4-4bfd-904c-70d8e625d8f6.png)
 
 ---
-#### 编译步骤
+#### 本地编译
 
-安装 node
-
+安装 node, yarn
 ```
 brew install node
-brew install electron
 brew install yarn
 ```
 
 启动
-
 ```
 yarn add concurrently --dev
 yarn start
 ```
 
+#### 打包应用
+```
+npm run pack
+```
 
 
 FAQ:
@@ -78,5 +79,6 @@ FAQ:
 答：这个问题主要是缓存的问题(会影响 javascript 脚本注入 polyfills.publishxxx.js)：
 windows下清除 C:\Users\<user>\AppData\Roaming\Tencent\WeChat\radium\web\profiles\*
 macOS 下清除 ~/Library/Containers/com.tencent.xinWeChat/Data/.wxapplet/web/profiles/multitab*
+```
 rm -rf Library/Containers/com.tencent.xinWeChat/Data/.wxapplet/web/profiles/multitab*
-
+```
