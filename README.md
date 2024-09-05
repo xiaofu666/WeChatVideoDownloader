@@ -8,9 +8,7 @@
 - 捕获后，可进行预览和下载
 - 支持 Win/Mac
 
-
-![image](https://github.com/lecepin/WeChatVideoDownloader/assets/11046969/b5fa47fd-5ca2-4b4e-a036-432562ca0ec6)
-
+![image](public/imgs/img.png)
 
 
 > 内部采用代理拦截请求识别，所以本软件需要安装证书及自动开启代理（当然这些都是自动执行的，无需手动操作）。关闭此软件时会自动清除代理信息，不影响使用。
@@ -25,24 +23,24 @@
 ### 效果
 
 1. 运行本软件
+
+![image](public/imgs/img0.png)
  
 2. 打开视频号的视频进行播放，如下图视频：
 
-![image](https://user-images.githubusercontent.com/11046969/169697581-6851f4d1-376b-42c5-825b-8e8101261027.png)
+![image](public/imgs/img1.png)
 
-3. 本软件会自动捕获到该视频，可以点击 “预览” 按钮来确认是否拦截正确
+3. 本软件会自动捕获到该视频
 
-![image](https://user-images.githubusercontent.com/11046969/169732758-90685ad1-6092-4c27-bfc5-ff13588f4927.png)
+![image](public/imgs/img2.png)
 
+4. 点击 “解密下载” 按钮进行下载
 
+![image](public/imgs/img3.png)
 
-4. 点击 “下载” 按钮进行下载
+4. 点击 “查看” 可播放已下载的视频
 
-![image](https://user-images.githubusercontent.com/11046969/169732854-371c5962-b9a1-47da-90a4-d50473e08509.png)
-
-
-![image](https://user-images.githubusercontent.com/11046969/169698058-5d9f213e-91c7-4f77-872e-db3d983d1a97.png)
-
+![image](public/imgs/img4.png)
 
 ---
 ### 使用
@@ -64,23 +62,36 @@
 ![image](https://user-images.githubusercontent.com/11046969/169732943-4815fa79-dda4-4bfd-904c-70d8e625d8f6.png)
 
 ---
-### 联系
 
-微信：
+### 本地编译
 
-<img src="https://github.com/lecepin/WeChatVideoDownloader/assets/11046969/f0ec7f3b-6c0a-4a64-bf83-ef5d633ea68f" width="250" />
+安装 node, yarn
+```
+brew install node
+brew install yarn
+```
 
-(请备注来源)
+启动
+```
+yarn add concurrently --dev
+yarn start
+```
 
-> 添加微信提示添加好友太频繁，无法添加，请在 [此处](https://github.com/lecepin/WeChatVideoDownloader/issues/115) 留言。
-
----
-
-<img src="https://github.com/lecepin/WeChatVideoDownloader/assets/11046969/73b42ddf-c946-4136-befb-58646d344b9d" width="400" />
-
-公众号回复：“视频号”获得新版本下载地址。
+### 打包应用
+```
+npm run pack
+```
 
 
+### FAQ:
 
+问：无法抓包？
 
+答：确保以下三个条件都满足：
+1、确保VPN关闭（因为此软件也是设置代理，会冲突）
+2、确保没开代理（因为此软件也是设置代理，会冲突）
+3、缓存的问题(会影响 javascript 脚本注入 polyfills.publishxxx.js)：
+* windows下清除 C:\Users\<user>\AppData\Roaming\Tencent\WeChat\radium\web\profiles\*
+* macOS 下清除 ~/Library/Containers/com.tencent.xinWeChat/Data/.wxapplet/web/profiles/multitab*
+然后重启软件，点击视频号链接，就会捕捉到了
 
