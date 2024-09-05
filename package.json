@@ -1,6 +1,6 @@
 {
   "name": "wechat-video-downloader",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "",
   "main": "./build-electron/index.js",
   "homepage": "./",
@@ -31,7 +31,7 @@
     }
   },
   "devDependencies": {
-    "concurrently": "^7.1.0",
+    "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "customize-cra": "^1.0.0",
     "electron": "^26.1.0",
@@ -66,16 +66,16 @@
     "semver": "^7.3.7",
     "xstate": "^4.32.1"
   },
-  "author": "lecepin",
+  "author": "lurich",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lecepin/WeChatVideoDownloader.git"
+    "url": "git+https://github.com/xiaofu666/WeChatVideoDownloader.git"
   },
   "build": {
     "extends": null,
     "productName": "WeChatVideoDownloader",
-    "appId": "com.lecepin.WeChatVideoDownloader",
+    "appId": "com.lurich.WeChatVideoDownloader",
     "directories": {
       "output": "packs"
     },
@@ -87,6 +87,12 @@
     ],
     "mac": {
       "icon": "public/icon/icons/mac/icon.icns",
+      "identity": null,
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "public/plist/DevelopmentExportOptionsPlist.plist",
+      "signIgnore": false,
+      "entitlementsInherit": "build/DevelopmentExportOptionsPlist.plist",
       "target": {
         "target": "default",
         "arch": [
