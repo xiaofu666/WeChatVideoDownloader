@@ -16,7 +16,7 @@
 
 ### 下载
 
-请到 Release 中进行下载：https://github.com/lecepin/WeChatVideoDownloader/releases
+请到 Release 中进行下载：https://github.com/xiaofu666/WeChatVideoDownloader/releases
 
 ---
 
